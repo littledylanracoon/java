@@ -1,0 +1,40 @@
+package practice;
+import java.util.Scanner;
+import java.util.*;
+public class Hey {
+	public static void main(String args[]) {
+		      ArrayList<Integer> A = new ArrayList<Integer>();
+		      A.add(9);
+		      A.add(5);
+		      A.add(2);
+		      A.add(7);
+		      permutation(A, 0);
+		    }
+		    
+		    public static void swap(ArrayList A, int i, int j)
+		    {
+		        int temp = (int)A.get(j);
+		        A.remove(j);
+		        A.add(i, temp);
+		    }
+		    
+		    public static void permutation(ArrayList A, int n)
+		    {
+		        if(n == A.size() - 1)
+		        {
+		            System.out.println(A);
+		            return;
+		        }
+		        for(int i = n; i < A.size(); i++)
+		        {
+		            swap(A, n, i);
+		            permutation(A, n+1);
+		            swap(A, i, n);
+		        }
+		    }
+		    
+		}
+
+	
+
+		
