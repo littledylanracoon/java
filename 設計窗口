@@ -1,0 +1,16 @@
+package awtDemo;
+import javax.swing.*;   //使用Swing類，必須引入Swing包
+public class JFrameDemo1{
+public static void main( String args[]) {
+//定義一個窗體物件f，窗體名稱為"一個簡單視窗"    
+JFrame f = new JFrame("www.jb51.net 一個簡單視窗");
+//設定窗體左上角與顯示屏左上角的座標，   
+f.setLocation(300,300);      //離顯示屏上邊緣300畫素，裡顯示屏左邊緣300畫素
+f.setSize(300,200);      //設定窗體的大小為300*200畫素大小
+f.setResizable(false);    //設定窗體是否可以調整大小，引數為布林值
+//設定窗體可見，沒有該語句，窗體將不可見，此語句必須有，否則沒有介面就沒有如何意義了
+f.setVisible( true);  
+//使用者單擊視窗的關閉按鈕時程式執行的操作
+f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+}
